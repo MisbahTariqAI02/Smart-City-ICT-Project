@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Smart Waste | Smart City</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #1976d2;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.nav-links a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* CONTENT */
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+.bins {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.bin {
+    background: white;
+    width: 180px;
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.level {
+    height: 20px;
+    margin-top: 10px;
+    background: #a5d6a7;
+    border-radius: 5px;
+}
+
+.full {
+    background: #ef9a9a;
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 10px;
+    background: #ddd;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+<h2>🏙️ Smart City</h2>
+<div class="nav-links">
+<a href="index.html">Dashboard</a>
+<a href="parking.html">Parking</a>
+<a href="traffic.html">Traffic</a>
+<a href="surveillance.html">Surveillance</a>
+<a href="waste.html">Waste</a>
+<a href="about.html">About</a>
+</div>
+</div>
+
+<div class="container">
+<h1>🗑️ Smart Waste Management System</h1>
+
+<p>
+This system monitors waste levels in smart bins. Clicking a bin simulates
+waste collection or overflow.
+</p>
+
+<div class="bins">
+    <div class="bin" onclick="toggleBin(this)">
+        🗑️ Bin A
+        <div class="level"></div>
+        <p>Status: Normal</p>
+    </div>
+
+    <div class="bin" onclick="toggleBin(this)">
+        🗑️ Bin B
+        <div class="level full"></div>
+        <p>Status: Full</p>
+    </div>
+
+    <div class="bin" onclick="toggleBin(this)">
+        🗑️ Bin C
+        <div class="level"></div>
+        <p>Status: Normal</p>
+    </div>
+</div>
+</div>
+
+<footer>
+Smart City ICT Project © 2026
+</footer>
+
+<script>
+function toggleBin(bin) {
+    const level = bin.querySelector(".level");
+    const text = bin.querySelector("p");
+
+    if (level.classList.contains("full")) {
+        level.classList.remove("full");
+        text.textContent = "Status: Emptied";
+    } else {
+        level.classList.add("full");
+        text.textContent = "Status: Full";
+    }
+}
+</script>
+
+</body>
+</html>
