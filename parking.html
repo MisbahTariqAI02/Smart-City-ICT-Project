@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Parking | Smart City</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+        }
+
+        /* ---------- NAVBAR ---------- */
+        .navbar {
+            background: #1976d2;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .navbar h2 {
+            margin: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* ---------- CONTENT ---------- */
+        .container {
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .description {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 15px;
+            border-left: 6px solid #1976d2;
+        }
+
+        .city {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .building {
+            background: #e0e0e0;
+            border: 3px solid #333;
+            width: 260px;
+            padding: 10px;
+        }
+
+        .building h2 {
+            text-align: center;
+            margin: 5px 0 10px;
+        }
+
+        .floor {
+            background: #ffffff;
+            border: 2px solid #999;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        .floor-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .slots {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+        }
+
+        .slot {
+            height: 50px;
+            border: 2px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        .free {
+            background-color: #a5d6a7;
+        }
+
+        .occupied {
+            background-color: #ef9a9a;
+        }
+
+        .legend {
+            margin-top: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 10px;
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>🏙️ Smart City</h2>
+    <div class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="parking.html">Parking</a>
+        <a href="traffic.html">Traffic</a>
+        <a href="surveillance.html">Surveillance</a>
+        <a href="about.html">About</a>
+    </div>
+</div>
+
+<div class="container">
+
+<h1>🚗 Smart Parking Management System</h1>
+
+<div class="description">
+    <p>
+        This module simulates a smart parking system used in modern smart cities.
+        Each building contains multiple floors and parking slots. Colors and icons
+        visually indicate whether a parking space is available or occupied.
+    </p>
+</div>
+
+<div class="city">
+
+    <!-- Building A -->
+    <div class="building">
+        <h2>Building A</h2>
+
+        <div class="floor">
+            <div class="floor-title">Floor 1</div>
+            <div class="slots">
+                <div class="slot free">🅿️</div>
+                <div class="slot occupied">🚗</div>
+                <div class="slot free">🅿️</div>
+            </div>
+        </div>
+
+        <div class="floor">
+            <div class="floor-title">Floor 2</div>
+            <div class="slots">
+                <div class="slot occupied">🚗</div>
+                <div class="slot free">🅿️</div>
+                <div class="slot free">🅿️</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Building B -->
+    <div class="building">
+        <h2>Building B</h2>
+
+        <div class="floor">
+            <div class="floor-title">Floor 1</div>
+            <div class="slots">
+                <div class="slot free">🅿️</div>
+                <div class="slot occupied">🚗</div>
+                <div class="slot occupied">🚗</div>
+            </div>
+        </div>
+
+        <div class="floor">
+            <div class="floor-title">Floor 2</div>
+            <div class="slots">
+                <div class="slot free">🅿️</div>
+                <div class="slot free">🅿️</div>
+                <div class="slot occupied">🚗</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="legend">
+    🅿️ Free Slot &nbsp;&nbsp; 🚗 Occupied Slot <br>
+    (Click on a slot to change status)
+</div>
+
+</div>
+
+<footer>
+    Smart City ICT Project © 2026
+</footer>
+
+<script>
+    const slots = document.querySelectorAll(".slot");
+
+    slots.forEach(slot => {
+        slot.addEventListener("click", () => {
+            if (slot.classList.contains("free")) {
+                slot.classList.remove("free");
+                slot.classList.add("occupied");
+                slot.textContent = "🚗";
+            } else {
+                slot.classList.remove("occupied");
+                slot.classList.add("free");
+                slot.textContent = "🅿️";
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
