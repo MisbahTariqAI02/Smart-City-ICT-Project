@@ -11,6 +11,39 @@ body { font-family:Arial; background:#f4f6f8; margin:0; }
 .cameras { display:flex; justify-content:center; gap:30px; flex-wrap:wrap; }
 .camera { background:white; width:200px; padding:15px; border-radius:6px; }
 footer { margin-top:40px; text-align:center; padding:10px; background:#ddd; }
+.camera {
+    text-decoration: none;
+    color: black;
+    background: white;
+    width: 200px;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    font-weight: bold;
+}
+/* Hover effect */
+.camera:hover {
+    transform: scale(1.05);
+}
+.camera:active {
+    transform: scale(0.97);
+}
+/* Status styles */
+.active {
+    border-left: 6px solid #2e7d32;
+    background: #e8f5e9;
+}
+.motion {
+    border-left: 6px solid #f57c00;
+    background: #fff3e0;
+}
+.inactive {
+    border-left: 6px solid #c62828;
+    background: #fdecea;
+}
 </style>
 </head>
 
