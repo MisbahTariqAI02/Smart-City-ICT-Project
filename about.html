@@ -1,50 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>About Smart City</title>
-<style>
-body {
-    font-family: Arial;
-    background: #eef2f5;
-    padding: 20px;
-}
-.card {
-    max-width: 700px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-left: 6px solid #1976d2;
-}
-</style>
+    <meta charset="UTF-8">
+    <title>About Us - Smart City</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1 style="text-align:center;">ℹ️ About This Project</h1>
-
-<div class="card">
-<p>
-This Smart City Website is an ICT project that simulates real-world urban
-systems using interactive graphics and JavaScript-based logic.
-</p>
-
-<ul>
-<li>🅿️ Smart Parking (multi-building)</li>
-<li>🚦 Traffic control system</li>
-<li>📹 Surveillance monitoring</li>
-<li>🗑️ Waste management</li>
-</ul>
-
-<p><b>Technologies:</b> HTML, CSS, JavaScript, GitHub Pages, Figma</p>
-
-<button onclick="go()">⬅ Dashboard</button>
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>🏙️ Smart City</h2>
+    <div class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="parking.html">Parking</a>
+        <a href="traffic.html">Traffic</a>
+        <a href="surveillance.html">Surveillance</a>
+        <a href="waste.html">Waste</a>
+        <a href="about.html" class="active">About</a>
+    </div>
 </div>
 
-<script>
-function go() {
-    window.location.href = "index.html";
-}
-</script>
+<!-- ABOUT SECTION -->
+<div class="about-container">
+    <h1>👥 Project Group Details</h1>
+    <p class="about-text">
+        This Smart City project is submitted as part of our ICT coursework.
+        Below are the official group members and academic details.
+    </p>
+
+    <div class="team-table">
+
+        <div class="row header">
+            <div>Name</div>
+            <div>Registration No</div>
+            <div>Batch</div>
+        </div>
+
+        <div class="row">
+            <div>Eman Fatima</div>
+            <div>250901004</div>
+            <div>AI-02</div>
+        </div>
+
+        <div class="row">
+            <div>Misbah Tariq</div>
+            <div>250901047</div>
+            <div>AI-02</div>
+        </div>
+
+        <div class="row">
+            <div>Noor Fatima</div>
+            <div>250901020</div>
+            <div>AI-02</div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Smart City ICT Project</p>
+</footer>
 
 </body>
 </html>
