@@ -111,6 +111,23 @@ waste collection or overflow.
         <p>Status: Normal</p>
     </div>
 </div>
+    <h2 style="margin-top:40px;">📋 Report / Update Bin</h2>
+<form style="max-width:400px; margin: 0 auto; text-align:left; background:#fff; padding:20px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+    <label for="binName">Bin Name:</label><br>
+    <input type="text" id="binName" name="binName" placeholder="Bin A, Bin B..." style="width:100%; padding:8px; margin:5px 0 15px 0; border-radius:5px; border:1px solid #ccc;"><br>
+
+    <label for="status">Status:</label><br>
+    <select id="status" name="status" style="width:100%; padding:8px; margin:5px 0 15px 0; border-radius:5px; border:1px solid #ccc;">
+        <option value="Normal">Normal</option>
+        <option value="Full">Full</option>
+        <option value="Emptied">Emptied</option>
+    </select><br>
+
+    <label for="notes">Notes:</label><br>
+    <textarea id="notes" name="notes" rows="3" placeholder="Optional notes..." style="width:100%; padding:8px; margin:5px 0 15px 0; border-radius:5px; border:1px solid #ccc;"></textarea><br>
+
+    <button type="submit" style="background:#1976d2; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">Submit</button>
+</form>
 </div>
 
 <footer>
